@@ -6,6 +6,7 @@ const resolvers = {
   Query: {
     // Resolver to get the current user's data
     me: async (_parent, _args, context) => {
+        console.log('Context user:', context.user);
       // Check if the user is authenticated
       if (context.user) {
         // Retrieve user data without password, including saved books
